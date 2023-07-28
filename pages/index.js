@@ -2,10 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -19,6 +22,9 @@ export default function Home() {
           <p>
             Get started by editing&nbsp;
             <code className={styles.code}>pages/index.js</code>
+            <br />
+            <br />
+            click here <Link href={'./about'} style={{color: 'red'}}>About Page</Link>
           </p>
           <div>
             <a
